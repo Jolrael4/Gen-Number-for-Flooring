@@ -1,0 +1,20 @@
+main
+	create:
+ 		list for strings
+ 		Array[11]
+ 		i = 0
+	recursive(Array,i)
+	print list to screen
+
+recursive(A,i)
+	for k 1->4
+		if((i > 1 && a[i-1] == k) || 											//check for 11
+		   (i > 2 && a[i-2] == k) ||											//check for 121
+		   (i > 3 && (((A[i-1] == k-1) && (A[i-2] == k-2) && (A[i-3] == k-3))||	//check for 1234 or 4321
+		   			  ((A[i-1] == k+1) && (A[i-2] == k+2) && (A[i-3] == k+3)))))
+			continue															//bad case; for increments
+		A[i] = k
+		if i == 11
+			add A to list
+			return																//ends recursive
+		recursive(A,i++)
