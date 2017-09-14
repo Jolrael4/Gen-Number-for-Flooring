@@ -1,10 +1,8 @@
 main
 	create:
- 		list for strings
  		Array[11]
  		i = 0
 	recursive(Array,i)
-	print list to screen
 
 recursive(A,i)
 	for k 1->4
@@ -15,6 +13,6 @@ recursive(A,i)
 			continue															//bad case; for increments
 		A[i] = k
 		if i == 11
-			add A to list
-			return																//ends recursive
-		recursive(A,i++)
+			print A to screen
+			continue															//solution; for increments
+		recursive(A,i++)														//partial solution; go to the next digit
